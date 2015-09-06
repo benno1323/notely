@@ -16,5 +16,5 @@
 !/log/.keep
 /tmp
 
-Remove .DS_Store
+# Ignore .DS_Store
 .DS_Store
