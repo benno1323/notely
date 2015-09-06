@@ -18,8 +18,10 @@
 <body>
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
-<%= yield %>
-
-</body>
+<div class="wrapper">
+	<%= yield %>
+	<div class="push"></div>
+</div>
 <%= render 'shared/footer' %>
+</body>
 </html>
