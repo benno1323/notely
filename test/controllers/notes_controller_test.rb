@@ -23,7 +23,7 @@ class NotesControllerTest < ActionController::TestCase
   test "should create note" do
     sign_in @user
     assert_difference('Note.count') do
-      post :create, note: { title: @note.title, content: @note.content, share: @note.share }
+      post :create, note: { title: @note.title, content: @note.content, share: @note.share, user: @user }
     end
 
     assert_redirected_to note_path(assigns(:note))

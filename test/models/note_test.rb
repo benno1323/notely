@@ -19,4 +19,9 @@ class NoteTest < ActiveSupport::TestCase
   	@note.share = nil
   	assert_not @note.save
   end
+
+  test "should have user id" do
+    @note.user_id = nil
+    assert_not @note.save
+  end
 end
