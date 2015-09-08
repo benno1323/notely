@@ -1,2 +1,35 @@
-<h1>MyNotes#index</h1>
-<p>Find me in app/views/my_notes/index.html.erb</p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+
+  <h1>Listing Notes</h1>
+  <%= link_to 'New Note', new_note_path %>
+  <br>
+  <br>
+  <div class="row text-center">
+    <% @my_notes.each do |my_note| %>
+    <div class="col-md-3 col-sm-6">
+      <div class="thumbnail">
+        <div class="jumbotron">
+          <h4><%= my_note.title %></h4>
+        </div>
+        <div class="caption container-fluid">
+          <div class="row">
+            <div class="col-md-2">
+              <p><%= my_note.boolean_to_text %></p>
+            </div>
+            <div class="col-md-10">
+              <p>
+                <%= link_to 'Show', my_note %>
+                <%= link_to 'Edit', edit_note_path(my_note) %>
+                <%= link_to 'Destroy', my_note, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <br>
+</div>
