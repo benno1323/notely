@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <li>
+  <%= link_to('Notely', notes_path, class: "navbar-brand topnav") %>
+  </li>
+<% else %>
+  <li>
+  <%= link_to('Notely', root_path, class: "navbar-brand topnav") %>
+  </li>
+<% end %>
