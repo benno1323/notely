@@ -38,59 +38,20 @@
 
 	<!-- Page Features -->
 	<div class="row text-center">
-
+		<% @last_notes.each do |last_note| %>
 		<div class="col-md-3 col-sm-6 hero-feature">
 			<div class="thumbnail">
-				<img src="http://placehold.it/800x500" alt="">
-				<div class="caption">
-					<h3>Feature Label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<div class="jumbotron">
+					<h4><%= last_note.title %></h4>
+				</div>
+				<div class="caption container-fluid">
 					<p>
 						<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
 					</p>
 				</div>
 			</div>
 		</div>
-
-		<div class="col-md-3 col-sm-6 hero-feature">
-			<div class="thumbnail">
-				<img src="http://placehold.it/800x500" alt="">
-				<div class="caption">
-					<h3>Feature Label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					<p>
-						<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 col-sm-6 hero-feature">
-			<div class="thumbnail">
-				<img src="http://placehold.it/800x500" alt="">
-				<div class="caption">
-					<h3>Feature Label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					<p>
-						<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-					</p>
-				</div>
-			</div>
-		</div>
-
-		<div class="col-md-3 col-sm-6 hero-feature">
-			<div class="thumbnail">
-				<img src="http://placehold.it/800x500" alt="">
-				<div class="caption">
-					<h3>Feature Label</h3>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-					<p>
-						<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-					</p>
-				</div>
-			</div>
-		</div>
-
+		<% end %>
 	</div>
 	<!-- /.row -->
 
