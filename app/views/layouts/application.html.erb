@@ -14,14 +14,25 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
-<%= render 'shared/navbar' %>
+
 <body>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<div class="wrapper">
-	<%= yield %>
-	<div class="push"></div>
-</div>
+	<% if notice %>
+	<div id="notice-wrapper">
+		<p class="notice"><%= notice %></p>
+	</div>
+	<% elsif alert %>
+	<div id="notice-wrapper">
+		<p class="alert"><%= alert %></p>
+	</div>
+	<% end %>
+
+<%= render 'shared/navbar' %>
+	<div class="wrapper">
+		<%= yield %>
+		<div class="push"></div>
+	</div>
+
 <%= render 'shared/footer' %>
+
 </body>
 </html>
