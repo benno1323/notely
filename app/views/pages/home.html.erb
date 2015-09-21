@@ -26,8 +26,6 @@
 <!-- Page Content -->
 <div class="container">
 
-	<hr>
-
 	<!-- Title -->
 	<div class="row">
 		<div class="col-lg-12">
@@ -55,8 +53,6 @@
 	</div>
 	<!-- /.row -->
 
-	<hr>
-
 </div>
 <!-- /.container -->
 
@@ -65,3 +61,17 @@
 
 <!-- Bootstrap Core JavaScript -->
 <!-- <script src="js/bootstrap.min.js"></script> -->
+<script>
+	$('document').ready(function(){
+		setCss();
+	});
+
+	function setCss(){
+		$('.navbar-default').css('background-color', 'rgba(0, 0, 0, 0.0)');
+		$('.navbar-default').css('border-color', 'rgba(0, 0, 0, 0.0)');
+		$('.navbar-default').css('background-image', 'none');
+		$('.navbar-default .navbar-nav > li > a').css('color', 'whitesmoke');
+		$('.navbar-default .navbar-brand').css('color', 'whitesmoke');
+		$('.intro-header').css('margin-top', '-75px');
+	};
+</script>
