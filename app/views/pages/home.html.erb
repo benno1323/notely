@@ -11,7 +11,7 @@
 					<br>
 					<ul class="list-inline intro-social-buttons">
 						<li>
-							<a href="<%= new_user_registration_path %>" class="btn btn-default btn-lg">
+							<a href="<%= new_user_registration_path %>" class="btn btn-success btn-lg">
 								<span class="network-name">Sign Up</span>
 							</a>
 						</li>
@@ -23,16 +23,11 @@
 	<!-- /.container -->
 </div>
 <!-- /.intro-header -->
-
+<h2 class="home-listing-separator"></h2>
 <!-- Page Content -->
 <div class="container">
 
 	<!-- Title -->
-	<div class="row">
-		<div class="col-lg-12">
-			<h3>Latest Notes</h3>
-		</div>
-	</div>
 	<!-- /.row -->
 
 	<!-- Page Features -->
@@ -58,14 +53,24 @@
 <script>
 	$('document').ready(function(){
 		setCss();
+
+		$('.navbar-default .navbar-brand').hover(function(){
+			$(this).css("color", "#F89406");
+		}, function(){
+			$(this).css("color", "whitesmoke");
+		});
+
+		$('.navbar-default .navbar-nav > li > a').hover(function(){
+			$(this).css("color", "#F89406");
+		}, function(){
+			$(this).css("color", "whitesmoke");
+		});
 	});
 
 	function setCss(){
 		$('.navbar-default').css('background-color', 'rgba(0, 0, 0, .1)');
 		$('.navbar-default').css('border-color', 'rgba(0, 0, 0, 0.0)');
 		$('.navbar-default').css('background-image', 'none');
-		$('.navbar-default .navbar-nav > li > a').css('color', 'whitesmoke');
-		$('.navbar-default .navbar-brand').css('color', 'whitesmoke');
 		$('.intro-header').css('margin-top', '-75px');
 	};
 </script>
