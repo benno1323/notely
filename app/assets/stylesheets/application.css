@@ -54,6 +54,20 @@ body {
 	margin-bottom: 45px;
 }
 
+.intro-message > h1 {
+	background-color: rgba(0, 0, 0, .6);
+	width: 75%;
+	margin: auto;
+	padding: 1% 0%;
+}
+
+.intro-message > h3 {
+	background-color: rgba(0, 0, 0, .6);
+	width: 75%;
+	margin: auto;
+	padding: 1% 0%;
+}
+
 .footer, .push {
 }
 

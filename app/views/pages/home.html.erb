@@ -6,8 +6,9 @@
 			<div class="col-lg-12">
 				<div class="intro-message">
 					<h1>Notely</h1>
-					<h3>Your online notebook! All your notes in one place!</h3>
-					<hr class="intro-divider">
+					<br>
+					<h3>All your notes anytime, anywhere!</h3>
+					<br>
 					<ul class="list-inline intro-social-buttons">
 						<li>
 							<a href="<%= new_user_registration_path %>" class="btn btn-default btn-lg">
@@ -37,17 +38,10 @@
 	<!-- Page Features -->
 	<div class="row text-center">
 		<% @last_notes.each do |last_note| %>
-		<div class="col-md-3 col-sm-6 hero-feature">
-			<div class="thumbnail">
+		<div class="col-md-4 col-sm-6">
 				<div class="jumbotron">
-					<h4><%= last_note.title %></h4>
+					<h4><%= link_to(last_note.title, last_note) %></h4>
 				</div>
-				<div class="caption container-fluid">
-					<p>
-						<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">More Info</a>
-					</p>
-				</div>
-			</div>
 		</div>
 		<% end %>
 	</div>
@@ -67,7 +61,7 @@
 	});
 
 	function setCss(){
-		$('.navbar-default').css('background-color', 'rgba(0, 0, 0, 0.0)');
+		$('.navbar-default').css('background-color', 'rgba(0, 0, 0, .1)');
 		$('.navbar-default').css('border-color', 'rgba(0, 0, 0, 0.0)');
 		$('.navbar-default').css('background-image', 'none');
 		$('.navbar-default .navbar-nav > li > a').css('color', 'whitesmoke');
