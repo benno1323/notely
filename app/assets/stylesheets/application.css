@@ -25,7 +25,28 @@ html, body {
 }
 
 body {
-	background-color: #DADFE1;
+	background-color: #f4f3f2;
+}
+
+.navbar-default {
+	background-color: #333333;
+	border-color: #333333;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #F89406;
+}
+
+.navbar-header > .navbar-brand {
+	color: whitesmoke;
+}
+
+.navbar-header > .navbar-brand:hover {
+	color: #F89406;
 }
 
 #notice-wrapper {
@@ -66,6 +87,20 @@ body {
 	width: 75%;
 	margin: auto;
 	padding: 1% 0%;
+}
+
+.home-listing-separator {
+	font-size: 35px;
+	margin: 0;
+	padding-top: 20px;
+}
+
+div > .jumbotron {
+	background-color: #FFF;
+}
+
+.list-inline > li > a {
+	color: whitesmoke;
 }
 
 .footer, .push {
