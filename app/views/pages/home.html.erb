@@ -11,7 +11,7 @@
 					<br>
 					<ul class="list-inline intro-social-buttons">
 						<li>
-							<a href="<%= new_user_registration_path %>" class="btn btn-success btn-lg">
+							<a href="<%= new_user_registration_path %>" class="btn btn-success btn-lg btn-home">
 								<span class="network-name">Sign Up</span>
 							</a>
 						</li>
@@ -23,10 +23,10 @@
 	<!-- /.container -->
 </div>
 <!-- /.intro-header -->
-<h2 class="home-listing-separator"></h2>
+
 <!-- Page Content -->
 <div class="container">
-
+<h2 class="home-listing-separator">Latest Notes</h2>
 	<!-- Title -->
 	<!-- /.row -->
 
@@ -36,6 +36,7 @@
 		<div class="col-md-4 col-sm-6">
 				<div class="jumbotron">
 					<h4><%= link_to(last_note.title, last_note) %></h4>
+					<h6>By <%= last_note.user.email %></h6>
 				</div>
 		</div>
 		<% end %>
@@ -68,7 +69,7 @@
 	});
 
 	function setCss(){
-		$('.navbar-default').css('background-color', 'rgba(0, 0, 0, .1)');
+		$('.navbar-default').css('background-color', 'rgba(0, 0, 0, .0)');
 		$('.navbar-default').css('border-color', 'rgba(0, 0, 0, 0.0)');
 		$('.navbar-default').css('background-image', 'none');
 		$('.intro-header').css('margin-top', '-75px');

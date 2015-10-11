@@ -25,11 +25,15 @@ html, body {
 }
 
 body {
-	background-color: #f4f3f2;
+	background-color: #ffffff;
+}
+
+a:hover {
+	text-decoration: none;
 }
 
 .navbar-default {
-	background-color: #333333;
+	background-color: #212020;
 	border-color: #333333;
 }
 
@@ -49,12 +53,24 @@ body {
 	color: #F89406;
 }
 
+.btn-home {
+	margin-top: 20%;
+	background-color: #F89406;
+	border-color: #F89406;
+	border-radius: 0 0 0 0;
+}
+
+.btn-home:hover {
+	background-color: #F57C00;
+	border-color: #F57C00;
+}
+
 #notice-wrapper {
 	position: absolute;
 	top: 0;
 	width: 100%;
 	z-index: 9999999;
-	background: rgba(135, 216, 211, 0.85);
+	background: rgba(248, 148, 6, .85);
 }
 
 .alert, .notice {
@@ -76,27 +92,23 @@ body {
 }
 
 .intro-message > h1 {
-	background-color: rgba(0, 0, 0, .6);
-	width: 75%;
-	margin: auto;
-	padding: 1% 0%;
+	/*background-color: rgba(248, 148, 6, .6);*/
+	margin: 0%;
 }
 
 .intro-message > h3 {
-	background-color: rgba(0, 0, 0, .6);
-	width: 75%;
-	margin: auto;
-	padding: 1% 0%;
+	/*background-color: rgba(248, 148, 6, .6);*/
+	margin: 0%;
 }
 
 .home-listing-separator {
+	text-align: center;
 	font-size: 35px;
-	margin: 0;
-	padding-top: 20px;
+	margin: 5% 0;
 }
 
 div > .jumbotron {
-	background-color: #FFF;
+	background-color: #F3F3F3;
 }
 
 .list-inline > li > a {
