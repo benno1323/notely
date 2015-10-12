@@ -66,6 +66,10 @@ a:hover {
 	border-color: #F57C00;
 }
 
+.btn-danger {
+	border-radius: 0 0 0 0;
+}
+
 #notice-wrapper {
 	position: absolute;
 	top: 0;
@@ -106,12 +110,6 @@ a:hover {
 	text-align: center;
 	font-size: 35px;
 	margin: 5% 0;
-}
-
-div > .jumbotron {
-	background-color: transparent;
-	border: 1px solid rgba(248, 148, 6, .6);
-	color: white;
 }
 
 .list-inline > li > a {
