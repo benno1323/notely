@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require jquery.matchHeight
 //= require_tree .
 
 $(document).ready(function(){

@@ -54,13 +54,14 @@ a:hover {
 }
 
 .btn-home {
-	margin-top: 20%;
+	color: white;
 	background-color: #F89406;
 	border-color: #F89406;
 	border-radius: 0 0 0 0;
 }
 
 .btn-home:hover {
+	color: white;
 	background-color: #F57C00;
 	border-color: #F57C00;
 }
@@ -108,11 +109,31 @@ a:hover {
 }
 
 div > .jumbotron {
-	background-color: #F3F3F3;
+	background-color: transparent;
+	border: 1px solid rgba(248, 148, 6, .6);
+	color: white;
 }
 
 .list-inline > li > a {
 	color: whitesmoke;
+}
+
+.thumbnail {
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+}
+
+.caption a {
+	color: black;
+}
+
+.caption a:hover {
+	color: #F89406;
+}
+
+.bottom-cta {
+	padding: 50px 0;
+	text-align: center;
 }
 
 .footer, .push {
