@@ -4,6 +4,6 @@ class Note < ActiveRecord::Base
 	belongs_to :user
 
 	def boolean_to_text
-		self.share ? 'Yes' : 'No'
+		self.share ? 'Public' : 'Private'
 	end
 end
