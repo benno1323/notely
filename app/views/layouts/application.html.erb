@@ -13,15 +13,9 @@
 </head>
 
 <body>
-	<% if notice %>
 	<div id="notice-wrapper">
-		<p class="notice"><%= notice %></p>
+		<%= render 'layouts/messages' %>
 	</div>
-	<% elsif alert %>
-	<div id="notice-wrapper">
-		<p class="alert"><%= alert %></p>
-	</div>
-	<% end %>
 
 <%= render 'shared/navbar' %>
 	<div class="wrapper">

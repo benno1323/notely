@@ -75,28 +75,40 @@ a:hover {
 	top: 0;
 	width: 100%;
 	z-index: 9999999;
-	background: rgba(248, 148, 6, .85);
+	/*background: rgba(248, 148, 6, .85);*/
 }
 
-.notice {
+/*flash*/
+
+div > ul > li {
+	list-style-type: none;
+}
+
+.alert-error, .alert-alert, .alert-success, .alert-notice {
+	border-radius: 0 0 0 0;
+	border-style: none;
 	padding: 2.5rem 0;
 	text-align: center;
-	margin: 0;
 	font-size: 1.25rem;
 	font-weight: 700;
 	color: #FFFFFF;
 	letter-spacing: 1px;
 }
 
-.alert {
-	padding: 2.5rem 0;
-	text-align: center;
-	margin: 0;
-	font-size: 1.25rem;
-	font-weight: 700;
-	color: #FFFFFF;
-	letter-spacing: 1px;
-	background: rgba(255, 0, 0, .85);
+.alert-error {
+  background: rgba(239, 72, 54, .85);
+}
+
+.alert-alert {
+  background: rgba(239, 72, 54, .85);
+}
+
+.alert-success {
+  background: rgba(248, 148, 6, .85);
+}
+
+.alert-notice {
+  background: rgba(248, 148, 6, .85);
 }
 
 .wrapper {
