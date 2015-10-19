@@ -78,7 +78,7 @@ a:hover {
 	background: rgba(248, 148, 6, .85);
 }
 
-.alert, .notice {
+.notice {
 	padding: 2.5rem 0;
 	text-align: center;
 	margin: 0;
@@ -86,6 +86,17 @@ a:hover {
 	font-weight: 700;
 	color: #FFFFFF;
 	letter-spacing: 1px;
+}
+
+.alert {
+	padding: 2.5rem 0;
+	text-align: center;
+	margin: 0;
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #FFFFFF;
+	letter-spacing: 1px;
+	background: rgba(255, 0, 0, .85);
 }
 
 .wrapper {
