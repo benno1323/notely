@@ -16,12 +16,12 @@
 //= require jquery.matchHeight
 //= require_tree .
 
-var remove = function() {
+var remove;
+remove = function() {
 	$('#notice-wrapper').fadeOut('slow', function() {
-		$this.remove();
+		$('this').remove();
 	});
 }
 
 $(document).ready(setTimeout(remove, 4500));
-
 $(document).on('page:load', setTimeout(remove, 4500));
