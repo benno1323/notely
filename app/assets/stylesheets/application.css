@@ -20,6 +20,10 @@
 	margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6, p {
+	font-family: 'Raleway', sans-serif;
+}
+
 html, body {
 	height: 100%;
 }
@@ -28,13 +32,26 @@ body {
 	background-color: #ffffff;
 }
 
+.light {
+	font-weight: 300;
+}
+
+.normal {
+	font-weight: 400;
+}
+
+.semi-bold {
+	font-weight: 600;
+}
+
 a:hover {
 	text-decoration: none;
+	color: #D35400;
 }
 
 .navbar-default {
-	background-color: #212020;
-	border-color: #333333;
+	background-color: #D35400;
+	border-color: #D35400;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -42,7 +59,7 @@ a:hover {
 }
 
 .navbar-default .navbar-nav > li > a:hover {
-	color: #F89406;
+	/*background-color: #E67E22;*/
 }
 
 .navbar-header > .navbar-brand {
@@ -50,7 +67,7 @@ a:hover {
 }
 
 .navbar-header > .navbar-brand:hover {
-	color: #F89406;
+	color: whitesmoke;
 }
 
 .btn-home {
@@ -163,4 +180,15 @@ div > ul > li {
 .panel {
 	border: 1px solid #ddd;
 	margin: 20px 0px;
+}
+
+.note-wrapper {
+  border: 1px solid blue;
+  background-color: #333333;
+	border-color: #333333;
+  color: orange;
+}
+
+.white {
+	color: white;
 }
