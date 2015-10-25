@@ -32,6 +32,14 @@ body {
 	background-color: #ffffff;
 }
 
+a:hover {
+	text-decoration: none;
+	color: #D35400;
+}
+
+
+/* Font Weight and Color */
+
 .light {
 	font-weight: 300;
 }
@@ -44,10 +52,11 @@ body {
 	font-weight: 600;
 }
 
-a:hover {
-	text-decoration: none;
-	color: #D35400;
+.white {
+	color: white;
 }
+
+/* Bootstrap classes */
 
 .navbar-default {
 	background-color: #D35400;
@@ -70,17 +79,41 @@ a:hover {
 	color: whitesmoke;
 }
 
+.panel {
+	border: 1px solid #ddd;
+	margin: 20px 0px;
+}
+
+.list-inline > li > a {
+	color: whitesmoke;
+}
+
+.thumbnail {
+	padding: 5px 10px;
+	border: 1px solid #ddd;
+}
+
+.caption a {
+	color: black;
+}
+
+.caption a:hover {
+	color: #F89406;
+}
+
+/* Buttons */
+
 .btn-home {
 	color: white;
-	background-color: #F89406;
-	border-color: #F89406;
+	background-color: #D35400;
+	border-color: #D35400;
 	border-radius: 0 0 0 0;
 }
 
 .btn-home:hover {
 	color: white;
-	background-color: #F57C00;
-	border-color: #F57C00;
+	background-color: #E67E22;
+	border-color: #E67E22;
 }
 
 .btn-danger {
@@ -152,23 +185,6 @@ div > ul > li {
 	margin: 5% 0;
 }
 
-.list-inline > li > a {
-	color: whitesmoke;
-}
-
-.thumbnail {
-	padding: 5px 10px;
-	border: 1px solid #ddd;
-}
-
-.caption a {
-	color: black;
-}
-
-.caption a:hover {
-	color: #F89406;
-}
-
 .bottom-cta {
 	padding: 50px 0;
 	text-align: center;
@@ -177,18 +193,9 @@ div > ul > li {
 .footer, .push {
 }
 
-.panel {
-	border: 1px solid #ddd;
-	margin: 20px 0px;
-}
-
 .note-wrapper {
   border: 1px solid blue;
   background-color: #333333;
 	border-color: #333333;
   color: orange;
-}
-
-.white {
-	color: white;
 }
