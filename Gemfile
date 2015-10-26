@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-# cancancan
-gem 'cancancan', '~> 1.10'
 # Devise for authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
