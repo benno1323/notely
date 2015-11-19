@@ -5,7 +5,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.joins(:user).where(share: true)
+    @notes = Note.joins(:user).where(share: true).last(20)
   end
 
   # GET /notes/1
