@@ -1,36 +1,18 @@
 <div class="container">
 
-  <h1>Listing Notes</h1>
-
-  <br>
-  <br>
-  <div class="row text-center">
+  <h1>Latest Notes</h1><br>
+  <div class="row">
     <% @notes.each do |note| %>
-    <div class="col-md-4 col-sm-6">
-      <div class="thumbnail">
-        <div class="jumbotron">
-          <h4><%= note.title %></h4>
-        </div>
-        <div class="caption container-fluid">
-          <div class="row">
-            <div class="col-md-2">
-              <p><%= note.boolean_to_text %></p>
-            </div>
-            <div class="col-md-10">
-              <p>
-                <%= link_to 'Show', note %>
-                <%= link_to 'Edit', edit_note_path(note) %>
-                <%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %>
-              </p>
-            </div>
-          </div>
+    <div class="col-md-4">
+      <div class="panel panel-default note-wrapper">
+        <div class="panel-body">
+          <h4><%= link_to note.title, note, class: "white" %></h4>
+          <p><%= note.boolean_to_text %></p>
         </div>
       </div>
     </div>
     <% end %>
   </div>
-
-  <br>
 </div>
 
 <script>
@@ -42,5 +24,5 @@
   function setDiVHeight(){
     $('.thumbnail').matchHeight();
     $('.jumbotron').matchHeight();
-  };
+  }
 </script>
