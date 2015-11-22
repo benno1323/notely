@@ -1,11 +1,28 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-12">
-			<h1><%= @note.title %></h1><br>
-			<p><%= @note.content %></p>
+			<h1><%= @note.title %></h1>
+				<%= link_to 'Edit', edit_note_path(@note) %> |
+  			<%= link_to 'Delete', @note, method: :delete, data: { confirm: 'Are you sure?'} %> |
+				<%= link_to 'Back', url_for(:back) %>
+				<br/>
+				<br/>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<p><%= @note.content %></p>
+				</div>
+			</div>
 		</div>
 	</div>
-	<%= link_to 'Edit', edit_note_path(@note) %> |
-  <%= link_to 'Delete', @note, method: :delete, data: { confirm: 'Are you sure?'} %> |
-	<%= link_to 'Back', url_for(:back) %>
+
+	<hr/>
+
+	<div class="row">
+		<div class="col-md-4">
+			<h4 class="semi-bold">
+				<%= @comments.count == 0 ? "Be the first to comment!" : "Comments:" %>
+			</h4>
+				<%= render partial: 'comments/comment', collection: @comments %>
+		</div>
+	</div>
 </div>
