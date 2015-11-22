@@ -11,6 +11,7 @@ class NotesController < ApplicationController
   # GET /notes/1
   # GET /notes/1.json
   def show
+    load_comments
   end
 
   # GET /notes/new
@@ -64,6 +65,10 @@ class NotesController < ApplicationController
   end
 
   private
+    def load_comments
+      @comments = @note.comments.last(5)
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_note
       @note = Note.find(params[:id])
