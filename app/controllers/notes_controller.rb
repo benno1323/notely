@@ -12,6 +12,7 @@ class NotesController < ApplicationController
   # GET /notes/1.json
   def show
     load_comments
+    build_comment
   end
 
   # GET /notes/new
@@ -67,6 +68,10 @@ class NotesController < ApplicationController
   private
     def load_comments
       @comments = @note.comments.last(5)
+    end
+
+    def build_comment
+      @comment = @note.comments.build
     end
 
     # Use callbacks to share common setup or constraints between actions.
