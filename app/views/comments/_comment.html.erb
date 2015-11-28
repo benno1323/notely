@@ -1,8 +1,15 @@
-<div class="panel panel-default">
-	<div class="panel-heading">
-		<%= comment.user.email %>
-	</div>
-	<div class="panel-body">
-		<p><%= comment.content %></p>
+<div class="row">
+	<div class="col-md-8">
+		<h4 class="semi-bold orange">
+			<%= @comments.count == 0 ? "Be the first to comment!" : "Comments:" %>
+		</h4>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<span class="light"><%= comment.user.email %></span>
+			</div>
+			<div class="panel-body">
+				<p><%= comment.content %></p>
+			</div>
+		</div>
 	</div>
 </div>
