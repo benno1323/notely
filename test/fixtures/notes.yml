@@ -4,8 +4,10 @@ one:
   title: MyString
   content: MyText
   share: false
+  user_id: 1
 
 two:
   title: MyString
   content: MyText
   share: false
+  user_id: 2

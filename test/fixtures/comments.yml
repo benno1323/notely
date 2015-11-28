@@ -2,8 +2,10 @@
 
 one:
   content: MyString
-  user_id: 
+  user_id:
+  note_id:
 
 two:
   content: MyString
-  user_id: 
+  user_id:
+  note_id:
