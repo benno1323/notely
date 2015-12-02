@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
 
 # Postgresql
-gem 'pg'
+gem 'pg', group: :production
+gem 'rails_12factor', group: :production
+
 # Devise for authentication
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -54,7 +56,3 @@ group :test do
 	gem 'selenium-webdriver'
 	gem 'database_cleaner'
 end
-
-gem 'rails_12factor', group: :production
-
-
