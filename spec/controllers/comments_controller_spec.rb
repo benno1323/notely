@@ -23,4 +23,19 @@ RSpec.describe CommentsController, type: :controller do
 				end
 			end
 		end
+
+		context "with invalid attributes" do
+			before(:each) do
+				@user = create(:user)
+				@note = create(:note)
+				sign_in @user
+			end
+
+			it 're-renders notes#show' do
+				invalid_attributes = { content: '', note_id: @note.id, user_id: @user.id }
+				post :create, note_id: @note.id,
+				comment: invalid_attributes
+				expect(response).to render_template(:show)
+			end
+		end
 	end
