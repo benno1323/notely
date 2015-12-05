@@ -1,29 +1,26 @@
 require 'rails_helper'
 
 RSpec.describe CommentsController, type: :controller do
-	# describe 'POST #create' do
-	# 	user = User.create(email: 'ben@example.com', password: '12345678',
-	# 								 password_confirmation: '12345678')
-	# 	note = Note.create(title: 'Test Note', content: 'My Note', user_id: 5)
-	# 	let(:valid_attributes) { { content: 'Test comment', note_id: note.id, user_id: user.id } }
+	describe "POST #create" do
+		context "with valid attributes" do
+			before(:each) do
+				@user = create(:user)
+				@note = create(:note)
+				sign_in @user
+			end
 
-	# 	before(:each) do
-	# 	end
+			it 'saves a comment in the database' do
+				expect{
+					post :create, note_id: @note.id,
+					comment: { content: 'My comment', note_id: @note.id, user_id: @user.id }
+					}.to change(Comment, :count).by(1)
+				end
 
-	# 	context 'with valid attributes' do
-	# 		it 'saves a comment in the database' do
-	# 			get :show, id: note.id
-	# 			expect{
-	# 				post :create,
-	# 					comment: valid_attributes
-	# 			}.to change(Note, :count).by(1)
-	# 		end
-
-	# 		it 'redirects to notes#show'
-	# 	end
-
-	# 	context 'with invalid attributes' do
-	# 		it 're-renders the notes/show template'
-	# 	end
-	# end
-end
+				it "redirect to notes#show" do
+					post :create, note_id: @note.id,
+					comment: { content: 'My comment', note_id: @note.id, user_id: @user.id }
+					expect(response).to redirect_to(note_path(@note))
+				end
+			end
+		end
+	end
