@@ -35,7 +35,7 @@ nav {
 }
 
 body {
-	background-color: #ffffff;
+	background-color: #F4F3F2;
 }
 
 a:hover {
@@ -64,6 +64,10 @@ a:hover {
 
 .orange {
 	color: #D35400;
+}
+
+.whitesmoke-bg {
+	background-color: #FFFFFF;
 }
 
 /* Bootstrap classes */
@@ -177,7 +181,7 @@ div > ul > li {
 	height: auto !important;
 	height: 100%;
 	margin: 0 auto -4em;
-	margin-bottom: 45px;
+	margin-bottom: 0px;
 }
 
 .intro-message > h1 {
