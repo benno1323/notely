@@ -21,72 +21,53 @@
 <!-- Page Content -->
 
 <div class="container">
-	<div class="row">
-		<h2 class="home-listing-separator">Testimonial</h2>
-		<blockquote>
-			<p>
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam illum perferendis esse reprehenderit ipsum officiis itaque recusandae dolore, repellat pariatur maiores saepe nam amet, blanditiis, corporis nihil tempore soluta expedita."
-			</p>
-			<p><small>Anonymous</small></p>
-		</blockquote>
-	</div>
-</div>
-
-<div class="banner">
-	<div class="container">
-		<h2>Latest Notes</h2>
-		<br>
-		<!-- Page Features -->
-		<div class="row">
-			<% @last_notes.each do |last_note| %>
-			<div class="col-md-4">
-				<div class="thumbnail">
-					<div class="caption">
-						<h4><%= link_to(last_note.title, last_note) %></h4>
-						<p>by <%= last_note.user.email %></p>
-						<br>
-						<p><%= last_note.content.truncate(50) %></p>
-					</div>
+	<h2 class="home-listing-separator">How it works?</h2>
+	<div class="row  text-center">
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<div class="caption">
+					<h3>1. Create a free account</h3>
 				</div>
 			</div>
-			<% end %>
 		</div>
-		<!-- /.row -->
-	</div>
-	<!-- /.container -->
-</div>
 
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<div class="caption">
+					<h3>2. Create a new note!</h3>
+				</div>
+			</div>
+		</div>
 
-<div class="container bottom-cta">
-	<div class="row">
-		<div class="col-lg-12">
-			<h3>Create an account for free!</h3>
-			<br>
-			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-lg btn-home" %>
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<div class="caption">
+					<h3>3. Share it with others or keep it private!</h3>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 
-<script>
-	$('document').ready(function(){
-		setDiVHeight();
-		setCss();
+	<script>
+		$('document').ready(function(){
+			setDiVHeight();
+			setCss();
 
-		$('.navbar-default .navbar-nav > li > a').hover(function(){
-			$(this).css("color", "#F89406");
-		}, function(){
-			$(this).css("color", "whitesmoke");
+			$('.navbar-default .navbar-nav > li > a').hover(function(){
+				$(this).css("color", "#F89406");
+			}, function(){
+				$(this).css("color", "whitesmoke");
+			});
 		});
-	});
 
-	function setCss(){
-		$('.navbar-default').css('background-color', 'rgba(0, 0, 0, .0)');
-		$('.navbar-default').css('border-color', 'rgba(0, 0, 0, 0.0)');
-		$('.navbar-default').css('background-image', 'none');
-		$('.intro-header').css('margin-top', '-75px');
-	}
+		function setCss(){
+			$('.navbar-default').css('background-color', 'rgba(0, 0, 0, .0)');
+			$('.navbar-default').css('border-color', 'rgba(0, 0, 0, 0.0)');
+			$('.navbar-default').css('background-image', 'none');
+			$('.intro-header').css('margin-top', '-75px');
+		}
 
-	function setDiVHeight(){
-		$('.caption').matchHeight();
-	}
-</script>
+		function setDiVHeight(){
+			$('.caption').matchHeight();
+		}
+	</script>
