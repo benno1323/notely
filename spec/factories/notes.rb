@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
 	factory :note do
 		association :user
 		title { Faker::Lorem.sentence }
@@ -15,7 +15,7 @@ FactoryGirl.define do
 			end
 
 			after(:create) do |note, evaluator|
-				FactoryGirl.create_list(:comment, evaluator.comments_count, note: note)
+				FactoryBot.create_list(:comment, evaluator.comments_count, note: note)
 			end
 		end
 	end
