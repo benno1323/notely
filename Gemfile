@@ -35,7 +35,7 @@ end
 group :test do
   gem 'faker'
 	gem 'capybara'
-	# gem 'selenium-webdriver'
+	gem 'selenium-webdriver', '~> 3.10'
 	gem 'database_cleaner'
   gem 'launchy'
   gem 'rspec-rails', '3.7.2'
